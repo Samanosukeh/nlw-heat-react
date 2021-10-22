@@ -1,7 +1,12 @@
+import styles from "./App.module.scss";
+import { LoginBox } from "./components/LoginBox/LoginBox";
+import { MessageList } from "./components/MessageList";
+
 export function App() {
   return (
-    <div className="App">
-     <h1>Hello World</h1>
-    </div>
+    <main className={styles.contentWrapper}>
+      <MessageList />
+      <LoginBox />
+    </main>
   )
 }
