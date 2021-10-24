@@ -6,9 +6,7 @@ import styles from "./styles.module.scss"
 
 export function LoginBox() {    
     // importando o contexto do usuário
-    const { user, signInUrl } = useContext(AuthContext);
-
-    console.log(user);
+    const { signInUrl } = useContext(AuthContext);
 
     return(
         <div className={styles.loginBoxWrapper}>
