@@ -9,7 +9,7 @@ export function App() {
   const { user } = useContext(AuthContext);
 
   return (
-    <main className={styles.contentWrapper}>
+    <main className={`${styles.contentWrapper} ${!!user ? styles.contentSigned: ''}`}>
       <MessageList />
       {/* Se usuário nao tiver nulo, mostrar o login */}
       { !!user ? <SendMessageForm /> : <LoginBox /> }

@@ -43,6 +43,10 @@ export function AuthProvider(props: AuthProvider) {
         const { token, user } = response.data; //pega os dados do back
 
         localStorage.setItem('@dowhile:token', token);//salva no localStorage
+        
+        // setando a autorização de enviar o token sempre mesmo logando
+        api.defaults.headers.common.authorization = `Bearer ${token}`;
+
         setUser(user);//muda o estado do usuário
     }
 
